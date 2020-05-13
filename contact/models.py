@@ -23,6 +23,9 @@ class User(models.Model):
     date = models.DateField(auto_now_add=True)
     def __str__(self):
         return self.login
+    class Meta:
+        verbose_name="Utilisateur"
+
 class Categorie(models.Model):
     nom = models.CharField(max_length=255)
     def __str__(self):
