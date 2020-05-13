@@ -9,7 +9,7 @@ class Contact(models.Model):
     nom = models.CharField(max_length=100)
     adresse = models.CharField(max_length=255)
     ville = models.CharField(max_length=100)
-    tel = models.IntegerField()
+    tel = models.IntegerField(verbose_name="Téléphone")
     email = models.EmailField(max_length=255)
     profession = models.CharField(max_length=100)
     user = models.ForeignKey('User', on_delete=models.CASCADE)
